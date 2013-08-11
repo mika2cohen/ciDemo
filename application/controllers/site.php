@@ -49,7 +49,13 @@ class Site extends CI_Controller {
 
     public function home(){
         $data['title'] = "Welcome!";
-       $this->load->view("view_home", $data);
+        $data['var1'] = 1;
+        $data['var2'] = 2;
+
+        $this->load->model("math");
+        $data['addTotal'] = $this->math->add($data["var1"],$data["var2"]);
+        $data['subTotal'] = $this->math->sub($data["var1"],$data["var2"]);
+        $this->load->view("view_home", $data);
     }
 
     public function addStuff(){
