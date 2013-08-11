@@ -7,9 +7,18 @@
  * To change this template use File | Settings | File Templates.
  */
 
+
+
+
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+
 class Site extends CI_Controller {
+
+    /**
+     * @var $math Math
+     */
+    public $math;
 
     /**
      * Index Page for this controller.
@@ -28,13 +37,18 @@ class Site extends CI_Controller {
      */
     public function index()
     {
-        echo "Hi Internet!";
-        $this->hello();
+        echo "Hi Internet!<br>";
+        $this->addStuff();
 
     }
 
     public function hello(){
         echo "Hello";
+    }
+
+    public function addStuff(){
+        $this->load->model("math");
+        echo $this->math->add(2,3);
     }
 }
 
