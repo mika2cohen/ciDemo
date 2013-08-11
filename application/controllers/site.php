@@ -21,6 +21,11 @@ class Site extends CI_Controller {
     public $math;
 
     /**
+     * @var $home
+     */
+    public $home;
+
+    /**
      * Index Page for this controller.
      *
      * Maps to the following URL
@@ -38,12 +43,13 @@ class Site extends CI_Controller {
     public function index()
     {
         echo "Hi Internet!<br>";
-        $this->addStuff();
+        $this->home();
 
     }
 
-    public function hello(){
-        echo "Hello";
+    public function home(){
+        $data['title'] = "Welcome!";
+       $this->load->view("view_home", $data);
     }
 
     public function addStuff(){
