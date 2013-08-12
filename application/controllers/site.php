@@ -26,6 +26,11 @@ class Site extends CI_Controller {
     public $home;
 
     /**
+     * @var $get_db Get_db
+     */
+    public $get_db;
+
+    /**
      * Index Page for this controller.
      *
      * Maps to the following URL
@@ -66,6 +71,13 @@ class Site extends CI_Controller {
     function about(){
         $data['title'] = "About!";
         $this->load->view("view_about",$data);
+    }
+
+    function getValues(){
+
+        $this->load->model("get_db");
+        $data['results'] = $this->get_db->getAll();
+        $this->load->view("view_db",$data);
     }
 }
 
