@@ -13,4 +13,8 @@ class Math extends CI_Model {
         return $var1 + $var2;
     }
 
+    public function sub($val1, $val2){
+        return $val1 - $val2;
+    }
+
 }

@@ -42,13 +42,13 @@ class Site extends CI_Controller {
      */
     public function index()
     {
-        echo "Hi Internet!<br>";
+
         $this->home();
 
     }
 
     public function home(){
-        $data['title'] = "Welcome!";
+        $data['title'] = "Home!";
         $data['var1'] = 1;
         $data['var2'] = 2;
 
@@ -61,6 +61,11 @@ class Site extends CI_Controller {
     public function addStuff(){
         $this->load->model("math");
         echo $this->math->add(2,3);
+    }
+
+    function about(){
+        $data['title'] = "About!";
+        $this->load->view("view_about",$data);
     }
 }
 

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title><?php echo $title ?></title>
 
-	<!--<style type="text/css">
+	<!-- <style type="text/css">
 
 	::selection{ background-color: #E13300; color: white; }
 	::moz-selection{ background-color: #E13300; color: white; }
@@ -67,12 +67,7 @@
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
-    <h2>Add</h2>
-    <p><?php echo $var1. " + ". $var2. " = " . $addTotal; ?></p>
-    <h2>Sub</h2>
-    <p><?php echo $var1. " - ". $var2. " = " . $subTotal; ?></p>
-
+	<h1>Welcome to About</h1>
     <a href="about">about</a>
     <a href="home">home</a>
 
@@ -81,4 +76,5 @@
 </div>
 
 </body>
+
 </html>
